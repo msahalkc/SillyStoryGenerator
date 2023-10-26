@@ -15,19 +15,19 @@ let insertZ = ['spontaneously combusted','melted into a puddle on the sidewalk',
 randomize.addEventListener('click', result);
 
 function result() {
-    let newStory = storyText
-    let xItem = randomValueFromArray(insertX)
-    let yItem = randomValueFromArray(insertY)
-    let zItem = randomValueFromArray(insertZ)
-    newStory = newStory.replaceAll(':insertx:', xItem)
-    newStory = newStory.replace(':inserty:', yItem)
-    newStory = newStory.replace(':insertz:', zItem)
-
+  let newStory = storyText
+  let xItem = randomValueFromArray(insertX)
+  let yItem = randomValueFromArray(insertY)
+  let zItem = randomValueFromArray(insertZ)
+  newStory = newStory.replaceAll(':insertx:', xItem)
+  newStory = newStory.replace(':inserty:', yItem)
+  newStory = newStory.replace(':insertz:', zItem)
+  
   if(customName.value !== '') {
     const name = customName.value;
-    let newStory = newStory.replace('Bob', name)
+    newStory = newStory.replace('Bob', name)
   }
-
+  
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300/14) + 'stone';
     const temperature =  Math.round((94 - 32) * 5/9) + '°C';
